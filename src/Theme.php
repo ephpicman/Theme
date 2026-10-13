@@ -64,6 +64,15 @@ final class Theme {
 	}
 
 	/**
+	 * Run uninstall routines.
+	 *
+	 * @return void
+	 */
+	public static function uninstall() {
+		// Add permanent cleanup here when needed.
+	}
+
+	/**
 	 * Run deactivation routines.
 	 *
 	 * @return void
