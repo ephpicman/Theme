@@ -7,6 +7,8 @@
 
 namespace EphpicmanTheme;
 
+use EPM\App;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -45,6 +47,9 @@ final class Theme {
 	 * @return void
 	 */
 	public function init() {
+		// Register this theme with EPM.
+		App::get_instance()->registerTheme( get_template_directory() );
+
 		// Temporary translation-pipeline test string.
 		__( 'Hello', 'ephpicman-starter' );
 
