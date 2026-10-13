@@ -37,3 +37,7 @@ msgstr ""
 #: style.css
 msgid "https://github.com/ephpicman"
 msgstr ""
+
+#: src/Theme.php:49
+msgid "Hello"
+msgstr ""
