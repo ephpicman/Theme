@@ -7,7 +7,7 @@
 
 namespace EphpicmanTheme;
 
-use EphpicMan\App;
+use EPM\App;
 
 defined( 'ABSPATH' ) || exit;
 
