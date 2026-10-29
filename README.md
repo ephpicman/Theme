@@ -20,8 +20,8 @@ EPM is the shared framework responsible for orchestrating the lifecycle of produ
 1. WordPress loads `functions.php`, which guards against direct access, defines the theme file constant, loads the synchronized EPM bootstrap and the theme class, and registers the theme with `EpmLoader`.
 2. The theme entry point connects activation and deactivation callbacks to WordPress and registers the theme's initialization method on `init`.
 3. `src/Theme.php` registers the active theme's directory with EPM during initialization and loads the theme's translations.
-4. The EPM bootstrap initializes its loader and invokes `EphpicMan\\App::run()` on `wp_loaded`. This happens after the theme and active plugins have had their earlier WordPress initialization opportunities to register with EPM.
-5. The theme's `index.php` delegates final request handling to `EphpicMan\\App::terminate()`. EPM owns that framework-level termination boundary; WordPress still determines which template is selected.
+4. The EPM bootstrap initializes its loader and invokes `EPM\\App::run()` on `wp_loaded`. This happens after the theme and active plugins have had their earlier WordPress initialization opportunities to register with EPM.
+5. The theme's `index.php` delegates final request handling to `EPM\\App::terminate()`. EPM owns that framework-level termination boundary; WordPress still determines which template is selected.
 
 The lifecycle methods are intentionally small placeholders. Add behavior only when the theme has a concrete requirement. Keep WordPress-native theme hooks integrated with WordPress rather than trying to replace them.
 
