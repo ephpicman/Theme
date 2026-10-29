@@ -7,9 +7,9 @@
  * @package EPM
  */
 
-namespace EphpicMan\Models;
+namespace EPM\Models;
 
-use EphpicMan\WordPress\UserQuery;
+use EPM\WordPress\UserQuery;
 
 defined( 'ABSPATH' ) || exit;
 
